@@ -15,9 +15,6 @@ define('DB_PASS', 'таны_нууц_үг');   // root-ын нууц үг
 define('SITE_URL', 'http://localhost/online-shop');
 ```
 
-### 3. XAMPP/WAMP
-- `online-shop` хавтсыг `htdocs` (XAMPP) эсвэл `www` (WAMP) доторх
-- `http://localhost/online-shop` хаягаар нээнэ
 
 ## Бүтэц
 ```
