@@ -83,6 +83,10 @@ $page = $page ?? '';
               <strong><?= htmlspecialchars($user['name']) ?></strong>
               <small><?= htmlspecialchars($user['email']) ?></small>
             </div>
+            <?php if (($user['role'] ?? '') === 'admin'): ?>
+            <a href="<?= SITE_URL ?>/pages/admin.php" class="dropdown-item" style="color:#f97316;font-weight:600"><i class="fas fa-shield-halved"></i> Admin хэсэг</a>
+            <div class="dropdown-divider"></div>
+            <?php endif; ?>
             <a href="<?= SITE_URL ?>/pages/orders.php"  class="dropdown-item"><i class="fas fa-box"></i> Миний захиалгууд</a>
             <a href="<?= SITE_URL ?>/pages/wishlist.php" class="dropdown-item"><i class="fas fa-heart"></i> Хүслийн жагсаалт</a>
             <a href="<?= SITE_URL ?>/pages/cart.php"    class="dropdown-item"><i class="fas fa-shopping-bag"></i> Сагс</a>
@@ -144,7 +148,7 @@ async function liveSearch(q) {
         <img src="${p.image || 'https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=80&q=60'}" alt="${p.product_name}">
         <div class="search-result-info">
           <span class="search-result-name">${p.product_name}</span>
-          <span class="search-result-price">$${parseFloat(p.sale_price).toFixed(2)}</span>
+          <span class="search-result-price">₮${parseFloat(p.sale_price).toFixed(2)}</span>
         </div>
         ${p.discount_pct > 0 ? `<span class="search-result-badge">${p.discount_pct}% Off</span>` : ''}
       </a>

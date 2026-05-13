@@ -41,8 +41,8 @@ $searchQuery    = htmlspecialchars($_GET['q'] ?? '');
       <div class="filter-card">
         <p class="filter-title">Үнийн хязгаар</p>
         <div class="price-range">
-          <input type="number" id="priceMin" placeholder="Min $" min="0">
-          <input type="number" id="priceMax" placeholder="Max $" min="0">
+          <input type="number" id="priceMin" placeholder="Мин ₮" min="0">
+          <input type="number" id="priceMax" placeholder="Хамгийн их ₮" min="0">
         </div>
         <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:12px" onclick="applyFilters()">
           Шүүх

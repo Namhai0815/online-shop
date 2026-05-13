@@ -110,18 +110,18 @@ function renderCart(items, total) {
             <img src="${img}" alt="${name}">
             <div>
               <p class="cart-product-name">${name}</p>
-              <p class="cart-product-price">$${price.toFixed(2)}</p>
+              <p class="cart-product-price">₮${price.toFixed(2)}</p>
             </div>
           </div>
         </td>
-        <td>$${price.toFixed(2)}</td>
+        <td>₮${price.toFixed(2)}</td>
         <td>
           <div class="cart-qty">
             <input type="number" value="${qty}" min="1" style="width:60px;padding:6px;border:1px solid var(--border);border-radius:4px"
               onchange="updateQty(${cid}, this.value)">
           </div>
         </td>
-        <td><strong>$${sub.toFixed(2)}</strong></td>
+        <td><strong>₮${sub.toFixed(2)}</strong></td>
         <td>
           <button class="remove-btn" onclick="removeItem(${cid}, ${pid})">
             <i class="fas fa-times"></i>
@@ -132,9 +132,9 @@ function renderCart(items, total) {
   });
 
   const shipping = total >= 50 ? 0 : 5;
-  document.getElementById('subtotal').textContent   = `$${parseFloat(total).toFixed(2)}`;
-  document.getElementById('shipping').textContent   = shipping === 0 ? 'Үнэгүй' : `$${shipping.toFixed(2)}`;
-  document.getElementById('grandTotal').textContent = `$${(parseFloat(total) + shipping).toFixed(2)}`;
+  document.getElementById('subtotal').textContent   = `₮${parseFloat(total).toFixed(2)}`;
+  document.getElementById('shipping').textContent   = shipping === 0 ? 'Үнэгүй' : `₮${shipping.toFixed(2)}`;
+  document.getElementById('grandTotal').textContent = `₮${(parseFloat(total) + shipping).toFixed(2)}`;
 }
 
 async function removeItem(cid, pid) {

@@ -105,8 +105,8 @@ function productCard(p) {
       <div class="product-info">
         <p class="product-name">${name}</p>
         <div class="product-prices">
-          ${discount > 0 ? `<span class="price-original">$${original.toFixed(2)}</span>` : ''}
-          <span class="price-sale">$${sale.toFixed(2)}</span>
+          ${discount > 0 ? `<span class="price-original">₮${original.toFixed(2)}</span>` : ''}
+          <span class="price-sale">₮${sale.toFixed(2)}</span>
         </div>
       </div>
     </div>`;

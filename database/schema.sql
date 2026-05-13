@@ -218,20 +218,20 @@ INSERT IGNORE INTO categories (name, slug) VALUES
 ('Наран цэцэг',    'sunflowers'),
 ('Орхид',          'orchids');
 
-INSERT IGNORE INTO products (category_id, name, slug, description, original_price, discount_pct, stock, is_featured) VALUES
-(1, 'Red Rose Bouquet',        'red-rose-bouquet',      'Classic red roses for every occasion.', 56,  30, 20, 1),
-(2, 'Spring Mix Bouquet',      'spring-mix-bouquet',    'A vibrant mix of seasonal flowers.',     50,  30, 15, 1),
-(3, 'Bird of Paradise',        'bird-of-paradise',      'Exotic tropical arrangement.',           29,  20, 10, 1),
-(1, 'Pink & White Roses',      'pink-white-roses',      'Elegant pink and white rose mix.',       25,  20, 18, 0),
-(2, 'Yellow Daisy Bouquet',    'yellow-daisy-bouquet',  'Cheerful yellow daisies.',               40,  15, 12, 1),
-(4, 'Sunflower Basket',        'sunflower-basket',      'Bright sunflower arrangement.',          35,  10, 8,  0),
-(5, 'Purple Orchid Pot',       'purple-orchid-pot',     'Elegant purple orchids in ceramic pot.', 60,  25, 5,  1),
-(3, 'Tropical Ginger Bunch',   'tropical-ginger-bunch', 'Exotic red ginger and palm leaves.',     45,  30, 7,  0),
-(1, 'White Rose Bundle',       'white-rose-bundle',     'Pure white roses, symbol of peace.',     38,  20, 14, 0),
-(2, 'Rainbow Wildflowers',     'rainbow-wildflowers',   'A colorful wildflower mix.',             32,  10, 20, 0),
-(4, 'Giant Sunflower Vase',    'giant-sunflower-vase',  'Large sunflowers in glass vase.',        55,  30, 6,  1),
-(5, 'White Orchid Cascade',    'white-orchid-cascade',  'Cascading white orchids.',               70,  20, 4,  0);
+INSERT IGNORE INTO products (category_id, name, slug, description, original_price, discount_pct, stock, image, is_featured) VALUES
+(1, 'Улаан Сарнайн Баглаа',      'red-rose-bouquet',      'Ямар ч тохиолдолд тохирох сонгодог улаан сарнай.',         56, 30, 20, 'https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?w=600&q=80', 1),
+(2, 'Хаврын Холимог Баглаа',     'spring-mix-bouquet',    'Улирлын гоё цэцгүүдийн тод хольц.',                        50, 30, 15, 'https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=600&q=80', 1),
+(3, 'Диваажингийн Шувуу',        'bird-of-paradise',      'Ховор тропик цэцэг, гоёмсог байрлуулалт.',                 29, 20, 10, 'https://images.unsplash.com/photo-1596438459194-f275f413d6ff?w=600&q=80', 1),
+(1, 'Ягаан & Цагаан Сарнай',     'pink-white-roses',      'Нарийн ягаан болон цагаан сарнайн хольц.',                 25, 20, 18, 'https://images.unsplash.com/photo-1559563458-527698bf5295?w=600&q=80', 0),
+(2, 'Шар Наран Цэцэг Баглаа',    'yellow-daisy-bouquet',  'Баяр хөөрийг илэрхийлэх шар цэцгийн баглаа.',             40, 15, 12, 'https://images.unsplash.com/photo-1490750967868-88df5691cc02?w=600&q=80', 1),
+(4, 'Наран Цэцгийн Сагс',        'sunflower-basket',      'Гэгээн наран цэцгийн байрлуулалт.',                        35, 10,  8, 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80', 0),
+(5, 'Ягаан Орхидын Вааз',        'purple-orchid-pot',     'Керамик вааз дахь нарийн ягаан орхид.',                    60, 25,  5, 'https://images.unsplash.com/photo-1610397648930-477b8c7f0943?w=600&q=80', 1),
+(3, 'Тропик Жинжүүрийн Баглаа',  'tropical-ginger-bunch', 'Ховор улаан жинжүүр ба пальмын навч.',                     45, 30,  7, 'https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?w=600&q=80', 0),
+(1, 'Цагаан Сарнайн Баглаа',     'white-rose-bundle',     'Энх тайвны бэлгэдэл цагаан сарнай.',                       38, 20, 14, 'https://images.unsplash.com/photo-1522748906645-95d8adfd52c7?w=600&q=80', 0),
+(2, 'Солонгон Зэрлэг Цэцэг',     'rainbow-wildflowers',   'Олон өнгийн зэрлэг цэцгийн хольц.',                        32, 10, 20, 'https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=600&q=80', 0),
+(4, 'Том Наран Цэцгийн Вааз',    'giant-sunflower-vase',  'Шилэн вааз дахь том наран цэцэг.',                         55, 30,  6, 'https://images.unsplash.com/photo-1543158181-e6f9f6712055?w=600&q=80', 1),
+(5, 'Цагаан Орхидын Эгнээ',      'white-orchid-cascade',  'Урсах хэлбэртэй цагаан орхид.',                            70, 20,  4, 'https://images.unsplash.com/photo-1610397648930-477b8c7f0943?w=600&q=80', 0);
 
 -- Default admin user (password: Admin@1234)
 INSERT IGNORE INTO users (name, email, password_hash, role) VALUES
-('Admin', 'admin@flowershop.mn', '$2y$12$examplehashedpasswordhere123456', 'admin');
+('Admin', 'admin@flowershop.mn', '$2y$12$Mn7VCNEVih/CqbjM20uaq.vfC6FanUvefod8lcZHI3vkzXPXl7J6i', 'admin');

@@ -101,14 +101,14 @@ async function loadOrderSummary() {
     items.insertAdjacentHTML('beforeend', `
       <div style="display:flex;justify-content:space-between;margin-bottom:10px;font-size:.9rem">
         <span>${item.product_name} × ${item.qty}</span>
-        <span>$${(item.sale_price * item.qty).toFixed(2)}</span>
+        <span>₮${(item.sale_price * item.qty).toFixed(2)}</span>
       </div>
     `);
   });
   const shipping = parseFloat(data.total) >= 50 ? 0 : 5;
-  document.getElementById('checkoutSubtotal').textContent = `$${parseFloat(data.total).toFixed(2)}`;
-  document.getElementById('checkoutShipping').textContent = shipping === 0 ? 'Үнэгүй' : `$${shipping.toFixed(2)}`;
-  document.getElementById('checkoutTotal').textContent    = `$${(parseFloat(data.total) + shipping).toFixed(2)}`;
+  document.getElementById('checkoutSubtotal').textContent = `₮${parseFloat(data.total).toFixed(2)}`;
+  document.getElementById('checkoutShipping').textContent = shipping === 0 ? 'Үнэгүй' : `₮${shipping.toFixed(2)}`;
+  document.getElementById('checkoutTotal').textContent    = `₮${(parseFloat(data.total) + shipping).toFixed(2)}`;
 }
 
 function validateEmail(email) {

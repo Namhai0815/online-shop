@@ -83,7 +83,8 @@ async function login() {
   alertEl.textContent = data.message || (data.success ? 'Амжилттай нэвтэрлээ!' : 'И-мэйл эсвэл нууц үг буруу');
 
   if (data.success) {
-    setTimeout(() => { window.location = `${SITE}/`; }, 1000);
+    const dest = data.user?.role === 'admin' ? `${SITE}/pages/admin.php` : `${SITE}/`;
+    setTimeout(() => { window.location = dest; }, 1000);
   } else {
     btn.disabled = false;
     btn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Нэвтрэх';

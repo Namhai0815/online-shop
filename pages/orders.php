@@ -60,11 +60,11 @@ async function loadOrders() {
         <div style="color:var(--gray);font-size:.9rem">Нийт захиалга</div>
       </div>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center">
-        <div style="font-size:2rem;font-weight:700;color:var(--primary)">$${parseFloat(s.total_spent||0).toFixed(2)}</div>
+        <div style="font-size:2rem;font-weight:700;color:var(--primary)">₮${parseFloat(s.total_spent||0).toFixed(2)}</div>
         <div style="color:var(--gray);font-size:.9rem">Нийт зарцуулсан</div>
       </div>
       <div style="background:var(--white);border:1px solid var(--border);border-radius:12px;padding:24px;text-align:center">
-        <div style="font-size:2rem;font-weight:700;color:var(--primary)">$${parseFloat(s.avg_order||0).toFixed(2)}</div>
+        <div style="font-size:2rem;font-weight:700;color:var(--primary)">₮${parseFloat(s.avg_order||0).toFixed(2)}</div>
         <div style="color:var(--gray);font-size:.9rem">Дундаж захиалга</div>
       </div>
     `;
@@ -92,7 +92,7 @@ async function loadOrders() {
         <hr style="margin:14px 0;border-color:var(--border)">
         <div style="display:flex;justify-content:space-between;align-items:center">
           <span style="color:var(--gray);font-size:.9rem">${o.item_count} бүтээгдэхүүн</span>
-          <span style="font-weight:700;color:var(--primary);font-size:1.1rem">$${parseFloat(o.total_amount).toFixed(2)}</span>
+          <span style="font-weight:700;color:var(--primary);font-size:1.1rem">₮${parseFloat(o.total_amount).toFixed(2)}</span>
         </div>
         <div style="margin-top:8px;font-size:.85rem;color:var(--gray)">
           <i class="fas fa-map-marker-alt"></i> ${o.address || '—'}
